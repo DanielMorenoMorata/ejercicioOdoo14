@@ -1,0 +1,82 @@
+<odoo>
+ <data>
+  <!-- explicit list view definition -->
+  <!-- Vistas de objetos213-->
+
+  <record model="ir.ui.view" id="items213.objetos213_list_view">
+  <field name="name">items213.objetos213.view.tree</field>
+  <field name="model">items213.objetos213</field>
+  <field name="arch" type="xml">
+      <tree>
+      <field name="name"/>
+      <field name="nombre"/>
+      <field name="cantidad"/>
+      </tree>
+  </field>
+  </record>
+
+<!-- search -->
+
+  <record model="ir.ui.view" id="items213.objetos213_search_view">
+  <field name="name">items213.objetos213.view.search</field>
+  <field name="model">items213.objetos213</field>
+  <field name="arch" type="xml">
+      <search>
+      <field name="name"/>
+      <field name="nombre"/>
+      <field name="cantidad"/>
+      <group>
+          <filter name="group_by_nombre" string="nombre" context="{'gropup_by':'nombre'}" />
+      </group>
+      </search>
+  </field>
+  </record>
+
+
+  <!-- form -->
+
+  <record model="ir.ui.view" id="items213.objetos213_form_view">
+  <field name="name">items213.objetos213.view.form</field>
+  <field name="model">items213.objetos213</field>
+  <field name="arch" type="xml">
+      <form string="Información objetos213">
+      <sheet>
+          <div class="oe_title">
+          <h1>
+              ID <field name="name" placeholder="ID"/>
+          </h1>
+          </div>
+          <group>
+          <group>
+              <separator string="Datos"/>
+              <field name="nombre" placeholder="nombre"/>
+              <field name="cantidad"/>
+          </group>
+          </group>
+      </sheet>
+      </form>
+  </field>
+
+  </record>
+
+
+
+
+  <!-- Definición de menús-->
+
+  <!-- actions opening views on models -->
+
+  <record model="ir.actions.act_window" id="items213.objetos213_action_window">
+  <field name="name">Objetos</field>
+  <field name="res_model">items213.objetos213</field>
+  <field name="view_mode">tree,form</field>
+  </record>
+
+  <menuitem name="items213" id="items213.menu_root"/>
+  <menuitem name="Objetos" id="items213.menu_objetos213" parent="items213.menu_root"/>
+  <menuitem name="List" id="items213.menu_objetos213_list" parent="items213.menu_objetos213"
+          action="items213.objetos213_action_window"/>
+
+ </data>
+</odoo>
+

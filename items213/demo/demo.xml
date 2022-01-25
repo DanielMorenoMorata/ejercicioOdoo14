@@ -1,0 +1,24 @@
+<odoo>
+  <data>
+
+      <record id="object0" model="items213.objetos213">
+          <field name="name">01</field>
+          <field name="nombre">Espada</field>
+          <field name="cantidad">1</field>
+      </record>
+
+      <record id="object1" model="items213.objetos213">
+          <field name="name">02</field>
+          <field name="nombre">Cuerda</field>
+          <field name="cantidad">50 pies</field>
+      </record>
+
+      <record id="object2" model="items213.objetos213">
+          <field name="name">03</field>
+          <field name="nombre">Mochila</field>
+          <field name="cantidad">1</field>
+      </record>
+
+  </data>
+</odoo>
+

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_items213_objetos213_usuario,items213.objetos213.usuario,model_items213_objetos213,items213.group_items213_usuario,1,0,0,0
+access_items213_objetos213_administrador,items213.objetos213.administrador,model_items213_objetos213,items213.group_items213_administrador,1,1,1,1_
+
