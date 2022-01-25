@@ -1,0 +1,8 @@
+{
+    'name': 'Aplicacion Application',
+    'description': 'Aplicación ejemplo.',
+    'author': 'Autor',
+    'depends': ['odoo213','partida213','items213'],
+    'application': True,
+    'data' : ['aplicacion_view.xml'],
+}
