@@ -1,0 +1,32 @@
+
+<odoo>
+ <record id="odoo213.modelo213_report" model="ir.actions.report">
+     <field name="name"> Informe de Personajes</field>
+     <field name="model">odoo213.modelo213</field>
+     <field name="report_type">qweb-pdf</field>
+     <field name="report_name">odoo213.modelo213_report_view</field>
+     <field name="report_file">odoo213.modelo213_report</field>
+     <field name="binding_model_id" ref="model_odoo213_modelo213"/>
+     <field name="binding_type">report</field>
+
+ </record>
+
+ <template id="modelo213_report_view">
+     <t t-call="web.html_container">
+         <!-- muestra datos de la empresa (salta página) -->
+         <t t-call="web.external_layout">
+             <h1>Personajes </h1><br />
+             <t t-foreach="docs" t-as="modelo213">
+                 <ul>
+                     <li>   ID <span t-field="modelo213.name" /></li>
+                     <li>   nombre <span t-field="modelo213.nombre" /></li>
+                     <li>   raza <span t-field="modelo213.raza" /></li>
+
+                 </ul>
+             </t>
+         </t>
+     </t>
+ </template>
+
+</odoo>
+

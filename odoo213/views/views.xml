@@ -1,0 +1,81 @@
+<odoo>
+    <data>
+        <!-- Vistas de modelo213-->
+
+       <record model="ir.ui.view" id="odoo213.modelo213_list_view">
+         <field name="name">odoo213.modelo213.view.tree</field>
+         <field name="model">odoo213.modelo213</field>
+         <field name="arch" type="xml">
+           <tree>
+             <field name="name"/>
+             <field name="nombre"/>
+             <field name="raza"/>
+           </tree>
+         </field>
+       </record>
+
+    <!-- search -->
+
+       <record model="ir.ui.view" id="odoo213.modelo213_search_view">
+         <field name="name">odoo213.modelo213.view.search</field>
+         <field name="model">odoo213.modelo213</field>
+         <field name="arch" type="xml">
+           <search>
+             <field name="name"/>
+             <field name="nombre"/>
+             <field name="raza"/>
+             <group>
+               <filter name="group_by_nombre" string="nombre" context="{'gropup_by':'nombre'}" />
+             </group>
+           </search>
+         </field>
+       </record>
+
+      
+       <!-- form -->
+      
+       <record model="ir.ui.view" id="odoo213.modelo213_form_view">
+         <field name="name">odoo213.modelo213.view.form</field>
+         <field name="model">odoo213.modelo213</field>
+         <field name="arch" type="xml">
+           <form string="Información modelo213">
+             <sheet>
+               <div class="oe_title">
+                 <h1>
+                   ID <field name="name" placeholder="ID"/>
+                 </h1>
+               </div>
+               <group>
+                 <group>
+                   <separator string="Datos"/>
+                   <field name="nombre" placeholder="nombre"/>
+                   <field name="raza"/>
+                 </group>
+               </group>
+             </sheet>
+           </form>
+         </field>
+
+       </record>
+
+
+
+
+
+       <!-- Definición de menús-->
+
+       <!-- actions opening views on models -->
+
+       <record model="ir.actions.act_window" id="odoo213.modelo213_action_window">
+         <field name="name">modelo213s</field>
+         <field name="res_model">odoo213.modelo213</field>
+         <field name="view_mode">tree,form</field>
+       </record>
+
+       <menuitem name="odoo213" id="odoo213.menu_root"/>
+       <menuitem name="modelo213s" id="odoo213.menu_modelo213" parent="odoo213.menu_root"/>
+       <menuitem name="List" id="odoo213.menu_modelo213_list" parent="odoo213.menu_modelo213"
+                 action="odoo213.modelo213_action_window"/>
+    </data>
+</odoo>
+

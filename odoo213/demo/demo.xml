@@ -1,0 +1,24 @@
+<odoo>
+ <data>
+
+     <record id="object0" model="odoo213.modelo213">
+         <field name="name">01</field>
+         <field name="nombre">Maria</field>
+         <field name="raza">Humana</field>
+     </record>
+
+     <record id="object1" model="odoo213.modelo213">
+         <field name="name">02</field>
+         <field name="nombre">Mikser</field>
+         <field name="raza">Enano</field>
+     </record>
+
+     <record id="object2" model="odoo213.modelo213">
+         <field name="name">03</field>
+         <field name="nombre">Aunn</field>
+         <field name="raza">Elfo</field>
+     </record>
+
+ </data>
+</odoo>
+
