@@ -1,0 +1,81 @@
+<odoo>
+  <data>
+<!-- Vistas de pta213-->
+
+   <record model="ir.ui.view" id="partida213.pta213_list_view">
+     <field name="name">partida213.pta213.view.tree</field>
+     <field name="model">partida213.pta213</field>
+     <field name="arch" type="xml">
+       <tree>
+         <field name="name"/>
+         <field name="sistema"/>
+         <field name="jugadores"/>
+       </tree>
+     </field>
+   </record>
+
+<!-- search -->
+
+   <record model="ir.ui.view" id="partida213.pta213_search_view">
+     <field name="name">partida213.pta213.view.search</field>
+     <field name="model">partida213.pta213</field>
+     <field name="arch" type="xml">
+       <search>
+         <field name="name"/>
+         <field name="sistema"/>
+         <field name="jugadores"/>
+         <group>
+           <filter name="group_by_sistema" string="sistema" context="{'gropup_by':'sistema'}" />
+         </group>
+       </search>
+     </field>
+   </record>
+
+
+   <!-- form -->
+
+   <record model="ir.ui.view" id="partida213.pta213_form_view">
+     <field name="name">partida213.pta213.view.form</field>
+     <field name="model">partida213.pta213</field>
+     <field name="arch" type="xml">
+       <form string="Información pta213">
+         <sheet>
+           <div class="oe_title">
+             <h1>
+               ID <field name="name" placeholder="ID"/>
+             </h1>
+           </div>
+           <group>
+             <group>
+               <separator string="Datos"/>
+               <field name="sistema" placeholder="sistema"/>
+               <field name="jugadores"/>
+             </group>
+           </group>
+         </sheet>
+       </form>
+     </field>
+
+   </record>
+
+
+
+
+
+   <!-- Definición de menús-->
+
+   <!-- actions opening views on models -->
+
+   <record model="ir.actions.act_window" id="partida213.pta213_action_window">
+     <field name="name">pta213s</field>
+     <field name="res_model">partida213.pta213</field>
+     <field name="view_mode">tree,form</field>
+   </record>
+
+   <menuitem name="partida213" id="partida213.menu_root"/>
+   <menuitem name="pta213s" id="partida213.menu_pta213" parent="partida213.menu_root"/>
+   <menuitem name="List" id="partida213.menu_pta213_list" parent="partida213.menu_pta213"
+             action="partida213.pta213_action_window"/>
+
+  </data>
+</odoo>

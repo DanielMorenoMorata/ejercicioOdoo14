@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_partida213_pta213_usuario,partida213.pta213.usuario,model_partida213_pta213,partida213.group_partida213_usuario,1,0,0,0
+access_partida213_pta213_administrador,partida213.pta213.administrador,model_partida213_pta213,partida213.group_partida213_administrador,1,1,1,1_
+

@@ -1,0 +1,31 @@
+<odoo>
+ <record id="partida213.pta213_report" model="ir.actions.report">
+     <field name="name"> Informe de Partidas</field>
+     <field name="model">partida213.pta213</field>
+     <field name="report_type">qweb-pdf</field>
+     <field name="report_name">partida213.pta213_report_view</field>
+     <field name="report_file">partida213.pta213_report</field>
+     <field name="binding_model_id" ref="model_partida213_pta213"/>
+     <field name="binding_type">report</field>
+
+ </record>
+
+ <template id="pta213_report_view">
+     <t t-call="web.html_container">
+         <!-- muestra datos de la empresa (salta página) -->
+         <t t-call="web.external_layout">
+             <h1>Partidas </h1><br />
+             <t t-foreach="docs" t-as="pta213">
+                 <ul>
+                     <li>   ID <span t-field="pta213.name" /></li>
+                     <li>   sistema <span t-field="pta213.sistema" /></li>
+                     <li>   jugadores <span t-field="pta213.jugadores" /></li>
+
+                 </ul>
+             </t>
+         </t>
+     </t>
+ </template>
+
+</odoo>
+
